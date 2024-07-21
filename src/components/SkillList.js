@@ -3,7 +3,7 @@ import React, { memo } from 'react'
 const SkillList = (props) => {
   return (
     <div>
-        <ul>
+        <ul id='skill-list'>
             {props.list.map((item,idx)=>{
                 return <li onClick={()=>props.deletelist(item)} key={'skill-number-'+idx}>{item}</li>
             })}

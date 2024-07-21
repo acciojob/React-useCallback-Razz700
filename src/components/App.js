@@ -14,10 +14,13 @@ setinput('');
    },[]);
 const deletelist=useCallback((listname)=>{
     console.log('hi',listname);
-   const newlist=list.filter((item)=>listname!=item);
-    console.log(newlist);
-    setlist(newlist);
-},[list]);
+  
+    setlist(list=>{
+        const newlist=list.filter((item)=>listname!=item);
+        console.log(newlist);
+       return newlist
+    });
+},[]);
   return (
     <div>
         <h1 id='heading'>use Callback Hook</h1>
