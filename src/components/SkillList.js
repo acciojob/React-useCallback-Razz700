@@ -5,7 +5,7 @@ const SkillList = (props) => {
     <div>
         <ul id='skill-list'>
             {props.list.map((item,idx)=>{
-                return <li onClick={()=>props.deletelist(item)} key={'skill-number-'+idx}>{item}</li>
+                return <li id={'skill-number-'+idx} onClick={()=>props.deletelist(item)} key={'skill-number-'+idx}>{item}</li>
             })}
         </ul>
     </div>
