@@ -9,8 +9,22 @@ const App = () => {
    const handleclick=useCallback((e,val)=>{
     e.preventDefault();
 console.log('hi',val);
-setlist(list=>[...list,val]);
-setinput('');
+if (val!='') {
+    setlist(list=>{
+    let val22=false;
+        list.forEach((item)=>{
+            if (item==val) {
+                val22=true;
+            }
+        })
+        if (!val22) {
+            return [...list,val];  
+        }else{
+            return list;
+        }
+       });
+    setinput('');   
+}
    },[]);
 const deletelist=useCallback((listname)=>{
     console.log('hi',listname);
