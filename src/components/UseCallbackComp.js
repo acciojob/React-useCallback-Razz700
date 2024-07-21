@@ -7,12 +7,12 @@ const UseCallbackComp = (props) => {
          props.setinput(val);
     }
   return (
-    <div>
+
         <form>
             <input value={props.input} onChange={onchange} id='skill-input' type='text' placeholder='Enter a skill' required />
             <button onClick={(e)=>{props.handleclick(e,props.input)}} id='skill-add-btn'>Add Skill</button>
         </form>
-    </div>
+   
   )
 }
 
