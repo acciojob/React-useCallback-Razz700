@@ -4,7 +4,7 @@ import UseCallbackComp from './UseCallbackComp';
 import SkillList from './SkillList';
 
 const App = () => {
-   const [list,setlist]=useState(['HTML','CSS','Javascript','React']);
+   const [list,setlist]=useState(['HTML','CSS','JavaScript','React']);
    const [input,setinput]=useState('');
    const handleclick=useCallback((e,val)=>{
     e.preventDefault();
